@@ -7,30 +7,30 @@
 
 ### Linux
 Creando el entorno virtual con python : 
-
+```bash
 $ apt install virtualenv
-
+```
 Instalar el gestor de la base de datos: 
-
+```bash
 $ apt install sqlite3
-
+```
 Usaremos la base de datos llamada "DB-ESP8266.db" y el archivo python "server.py".
 Ambos archivos deben estar en la misma carpeta ya que el archivo .py hace referencia al .db
 
 Creando el entorno virtual:
-
+```bash
 $ virtualenv venv
 $ source venv/bin/activate
 $ pip install flask flask-jsonpify flask-sqlalchemy flask-restful
 $ pip freeze
-
+```
 Para correr el servicio nuestra terminal debe acceder al entorno virtual (ven).
 
 Iniciar nuestro servicios REST con python en el puerto 5000 con localhost.
-
+```bash
 $ source venv/bin/activate
 $ python server.py
-
+```
 luego podremos hacer peticiones a:
 
 - POST a localhost:5000/temp
